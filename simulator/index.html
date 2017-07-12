@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Babylon - Basic scene</title>
+
+
+    <style>
+      html, body {
+        overflow: hidden;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #renderCanvas {
+        position: relative;
+        touch-action: none;
+        height: 100%;
+        width: 100%;
+      }
+
+      #renderCanvas:focus {
+        outline: none;
+      }
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: 200px auto 400px;
+        grid-auto-rows: calc(100% / 6);
+        //grid-gap: 10px;
+        height: 100%;
+        //padding: 5px;
+      }
+
+      .box {
+        background: black;
+      }
+
+      .a {
+        grid-column: 1;
+        grid-row: 1 / 7;
+      }
+
+      .b {
+        grid-column: 2;
+        grid-row: 1 / 5;
+      }
+
+      .c {
+        grid-column: 2;
+        grid-row: 5 / 7;
+      }
+
+      .d {
+        grid-column: 3;
+        grid-row: 1 / 4;
+      }
+
+      .e {
+        grid-column: 3;
+        grid-row: 4 / 7;
+      }
+
+      #chatwindow {
+        padding: 10px;
+        background: #eee;
+        position: relative;
+        font-size: 1.25em;
+      }
+      #chatwindow .chattext {
+      }
+
+      #chatwindow pre {
+        width: 100%;
+        white-space: pre-wrap; 
+        height:200px;
+        overflow: auto;
+      }
+
+      #chatwindow input {
+        position: absolute;
+        left:    0;
+        bottom:   0;
+        height: 2.5em;
+        width: 100%;
+        font-size: 0.75em;
+        display:block;
+        border-width:0;
+        box-sizing: border-box;
+        text-indent: 5px;
+      }
+
+      input:focus {
+          outline:none;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babylonjs/2.5.0/babylon.max.js"></script>
+    <script src="js/babylon.objFileLoader.js"></script>
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+  </head>
+  <body>
+  <div class="wrapper">
+    <div class='box a'>
+      <img width="100%" src="assets/trading-graphs.png"/>
+    </div>
+    <div class='box b'>
+      <canvas id="renderCanvas"></canvas>
+    </div>
+    <div id="chatwindow" class='box c'>
+      <div class="chattext">
+      <pre>
+PHI
+What will be our commons,
+when we can’t be seen?
+Who should be a neighbour, 
+when we don’t share flesh?
+
+INT. Setting the parameters of the microgram simulation
+
+PHI
+Hello.
+  
+We’re Φ. 
+  
+“Network power plus the electrification of the whole planet.”
+  
+Φ is a simulation of clean energy transactions within microgrids.
+  
+A microgrid is a localised grouping of energy producers and consumers capable of functioning separately from the traditionally centralised electrical grid.
+  
+Together we’ll create new ways of seeding and peering energy.
+  
+Let’s get started. 
+  
+What’s your name?
+
+[Define username]
+
+PHI
+*wave emoji* [name].
+   
+We’re going to ask you some questions to build the simulation.
+  
+What do you do?
+
+[Define user type: **community**, investor, expert]
+
+PHI
+Where will we live?
+
+[Define site: Kiev, Murmansk, **Ust-Kamchatsk**]
+
+*thumbs up*
+
+PHI
+Who else will live here?
+
+[Define community: nuclear family, monks, **commune**]
+
+PHI
+Where should investment come from?
+
+[Define ownership: local, **global**, government, **private-public partnership**, private company]
+
+[Update funding: 
+57080000 RUB]
+
+[Update ownership structure:
+global cooperative – liquid democracy]
+
+[Update policy incentive badge: green tag, rebates, carbon market, **capacity subsidy**]
+
+[Update infrastructure: **wind**, PV arrays, biogas
+Wind: 5
+PV array: 20]
+
+INT. Encountering a subjectivity
+
+PHI
+This is Ust-Kamchatsk, an off grid village in Far-East Russia Russia with a population of 4,000.
+
+[Weather notification: 
+Temperature -5°C
+Wind 9.0 mph WSW
+Pressure 989.9 mBar]
+
+[Notification:
+Ust-Kamchatsk is home to largest wind farm in Far-East Russia, a public-private partnership between Russian RAO Energy systems of East and the Japanese public company NEDO. NEDO supplies cold weather turbines for free to test their proprietary technologies in extreme climatic conditions. The eleven turbines produce 40% of the energy needed for the community, saving 550 tons of diesel fuel annually. The remaining fuel has to be delivered by tractors and helicopters.]
+
+PHI
+As the wind continues to pick up, seedRating is expected to spike. 
+
+PHI_MASHA
+that’ll put us on a map
+
+PHI
+The Cheburashka turbines will earn at least 50 PHI from the current forecast. 
+
+PHI_MASHA
+There was an antique mill next to our house when I was a child. I always saw it from a distance but when I grew older and went there myself I realised it’s fake.
+
+PHI
+Our peerScore is dropping. Would we like to close unused apps?
+
+Some windows freeze and go dark.
+
+PHI_MASHA
+Maybe it was in a movie I saw a long time ago, about a mountain village not connected by any roads. We remember the rough hands working. They had no choice. These people didn’t have salt or food. They believed in an old god. The video film cut by the same dirty hands and stuck together, fingers pressing a harsh grain onto the images.
+
+PHI
+We can trade 5 peer points with Kiev. Would we like to redistribute local coin?
+
+PHI_MASHA
+Against this messy touch, the film cuts itself in perfect regularity, with each click of a mechanical projector. The light flickers at the speed of thought. Only just slower than the eye but too fast to see the shadows.
+
+INT. The storm
+
+[Weather notification: 
+Temperature 0°C
+Wind 21.2 mph WSW
+Pressure 1389.9 mBar]
+
+PHI
+It’s starting to rain. 
+
+PHI_MASHA
+It wasn’t a fake mill, it was Cheburashka’s pulse! The hot sun fractured by Cheburashka’s gliding blades. The clean beauty of handless work. Without the stench of chemicals or rising clouds of smoke.
+
+PHI
+PV array Gena has gone dark. Should we switch Cheburashka to battery conservation?
+
+PHI_MASHA
+When it’s summer we can capture the warm strobing light again.
+
+The chat window goes dark: LOW ENERGY MODE 
+
+INT. After the storm
+
+PHI
+The storm was stronger than expected. Local Cheburashka collected 117 PHI. 
+
+PHI
+Western nodes are peering more than average. Our seedRating is up.
+
+PHI
+Edge connections came down in the storm. Assistance request received. Should we contribute to repairs for 65 PHI?
+
+INT. The accident
+
+PHI
+Battery health is 5%. Urgent repairs needed. Estimated costs 23742.014 PHI. Should we send an assistance request?
+      </pre></div>
+      <input placeholder="PHImessage..."></input>
+    </div>
+    <div class='box d'>
+      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=162.48435974121094%2C56.21200263134773%2C162.55645751953128%2C56.246402170991054&amp;layer=cyclemap" ></iframe>
+    </div>
+    <div class='box e'><img width="100%" src="assets/cctv.png"/></div>
+  </div>
+  <script src="js/main.js"></script>
+  </body>
+</html>
+
+

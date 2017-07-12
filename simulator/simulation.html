@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Babylon - Basic scene</title>
+
+
+    <style>
+      html, body {
+        overflow: hidden;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #renderCanvas {
+        position: relative;
+        touch-action: none;
+        height: 100%;
+        width: 100%;
+        background: rgb(38, 38, 51);
+      }
+
+      #renderCanvas:focus {
+        outline: none;
+      }
+
+      .controls {
+        width: 300px;
+        height: 180px;
+        position: absolute;
+        left: 30px;
+        bottom: 50px;
+        background: rgba(200, 54, 54, 0.2);
+        border-style: solid;
+        border-width: 0.5px;
+        padding: 20px;
+        color: white;
+        font-size: 1.2em;
+      }
+
+      .controls pre {
+        margin-top: 0em;
+        margin-bottom: 0.5em;
+      }
+
+      .controls button {
+        margin-top: 20px;
+        font-family: monospace;
+        -webkit-appearance: none;
+        font-size: 1em;
+      }
+
+      .controls button:focus {
+        outline: none;
+      }
+
+      .controls input {
+        font-size: 1.1em;
+        font-family: monospace;
+      }
+
+      .controls-title {
+        float: right;
+        font-size: 3em;
+        padding: 10px;
+      }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babylonjs/2.5.0/babylon.max.js"></script>
+    <script src="js/babylon.objFileLoader.js"></script>
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jstat/latest/jstat.min.js"></script>
+    <script src="js/combinatorics.js"></script>
+  </head>
+  <body>
+      <canvas id="renderCanvas"></canvas>
+      <script src="js/simulation.js"></script>
+      <div class="controls">
+        <pre class="controls-title" style="font-family: Arial">Ф</pre>
+        <pre>Number of grids:</pre>
+        <input placeholder="100" id="num-grids"></input></br></br>
+        <pre>Connectivity Threshold:</pre>
+        <input placeholder="7" id="conn-threshold"></input></br>
+        <button>Generate Network</button>
+      </div>
+  </body>
+</html>
+
+
+
